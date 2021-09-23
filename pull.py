@@ -10,7 +10,7 @@ endpoint = 'settings/inputs'
 start_epoch = '0'
 end_epoch = '0'
 alchemyengine = create_engine('postgresql+psycopg2://postgres:Stevahn23!!@192.168.1.73:5432/Plant')
-print('test')
+print('testing')
 '''
 url = 'https://192.168.1.150/api/measurements/historical/5f1bb58a-7895-442b-a3a1-ed8112128526/F/0/'+start_epoch+'/'+end_epoch
 headers = {'Accept': 'application/vnd.mycodo.v1+json',
