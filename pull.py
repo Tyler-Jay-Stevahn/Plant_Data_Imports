@@ -87,26 +87,4 @@ print('Got response_dict')
 df = pd.json_normalize(response_dict, record_path='measurements')
 print('Made dataframe for Light')
 df.to_sql('Light', alchemyengine, if_exists='replace')
-print('Written dataframe to Vapor Pressure Light')
-
-url = 'https://192.168.1.150/api/measurements/historical/564fe7a8-154a-4eb0-84a5-a539b6025854/ppm/0/'+start_epoch+'/'+end_epoch
-headers = {'Accept': 'application/vnd.mycodo.v1+json',
-            'X-API-KEY': api_key}
-response = requests.get(url, headers=headers, verify=False)
-response_dict = json.loads(response.text)
-print('Got response_dict')
-df = pd.json_normalize(response_dict, record_path='measurements')
-print('Made dataframe for CO2')
-df.to_sql('CO2', alchemyengine, if_exists='replace')
-print('Written dataframe to Vapor Pressure CO2')
-
-url = 'https://192.168.1.150/api/measurements/historical/564fe7a8-154a-4eb0-84a5-a539b6025854/ppb/1/'+start_epoch+'/'+end_epoch
-headers = {'Accept': 'application/vnd.mycodo.v1+json',
-            'X-API-KEY': api_key}
-response = requests.get(url, headers=headers, verify=False)
-response_dict = json.loads(response.text)
-print('Got response_dict')
-df = pd.json_normalize(response_dict, record_path='measurements')
-print('Made dataframe for VOC')
-df.to_sql('VOC', alchemyengine, if_exists='replace')
-print('Written dataframe to Vapor Pressure VOC')
+print('Written dataframe to Light')
