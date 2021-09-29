@@ -4,14 +4,13 @@ import pandas as pd
 import psycopg2
 from sqlalchemy import create_engine
 
-import urllib3
-
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 ip_address = '127.0.0.1'
 api_key = 'efnpmWkIGsgNhMUsxR23G8tbOcYSZAJR1ZW8H1o1tjGPbi/8QODtiCW0FIdPI/kN5hoJnQWhvCiEs9ELymAt9HrL2TnL8N8VuAinq5Yc3J609yyNXuOC96OQf1njb1XN0hXiTB/x7JfeFZpe8b2ymlE+k8bgJOkqgLMUrZDebbk='
 endpoint = 'settings/inputs'
 start_epoch = '0'
-end_epoch = '0'
+current_time = time.time()
+print(current_time)
+end_epoch = current_time
 alchemyengine = create_engine('postgresql+psycopg2://postgres:Stevahn23!!@192.168.1.73:5432/Plant')
 if_exists = 'append'
 
