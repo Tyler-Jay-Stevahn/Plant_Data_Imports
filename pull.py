@@ -15,7 +15,7 @@ end_epoch = current_time
 alchemyengine = create_engine('postgresql+psycopg2://postgres:Stevahn23!!@192.168.1.73:5432/Plant')
 if_exists = 'append'
 
-url = 'https://192.168.1.150/api/measurements/historical/5f1bb58a-7895-442b-a3a1-ed8112128526/F/0/'+start_epoch+'/'+end_epoch
+url = 'https://192.168.1.150/api/measurements/historical/5f1bb58a-7895-442b-a3a1-ed8112128526/F/0/'+start_epoch+'/',end_epoch
 headers = {'Accept': 'application/vnd.mycodo.v1+json',
             'X-API-KEY': api_key}
 response = requests.get(url, headers=headers, verify=False)
@@ -26,7 +26,7 @@ print('Made dataframe for Temperature')
 df.to_sql('Temperature', alchemyengine, if_exists=if_exists)
 print('Written dataframe to Temperature')
 
-url = 'https://192.168.1.150/api/measurements/historical/5f1bb58a-7895-442b-a3a1-ed8112128526/percent/1/'+start_epoch+'/'+end_epoch
+url = 'https://192.168.1.150/api/measurements/historical/5f1bb58a-7895-442b-a3a1-ed8112128526/percent/1/'+start_epoch+'/',end_epoch
 headers = {'Accept': 'application/vnd.mycodo.v1+json',
             'X-API-KEY': api_key}
 response = requests.get(url, headers=headers, verify=False)
