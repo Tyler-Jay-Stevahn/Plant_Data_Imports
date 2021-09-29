@@ -10,6 +10,7 @@ api_key = 'efnpmWkIGsgNhMUsxR23G8tbOcYSZAJR1ZW8H1o1tjGPbi/8QODtiCW0FIdPI/kN5hoJn
 endpoint = 'settings/inputs'
 start_epoch = '0'
 current_time = time.time()
+current_time = round(current_time)
 print(current_time)
 end_epoch = str(current_time)
 alchemyengine = create_engine('postgresql+psycopg2://postgres:Stevahn23!!@192.168.1.73:5432/Plant')
