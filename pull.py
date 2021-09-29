@@ -20,7 +20,7 @@ response_dict = json.loads(response.text)
 print('Got response_dict')
 df = pd.json_normalize(response_dict, record_path='measurements')
 print('Made dataframe for Temperature')
-df.to_sql('Temperature', alchemyengine, if_exists='append')
+df.to_sql('Temperature', alchemyengine, if_exists=if_exists)
 print('Written dataframe to Temperature')
 
 url = 'https://192.168.1.150/api/measurements/historical/5f1bb58a-7895-442b-a3a1-ed8112128526/percent/1/'+start_epoch+'/'+end_epoch
@@ -31,7 +31,7 @@ response_dict = json.loads(response.text)
 print('Got response_dict')
 df = pd.json_normalize(response_dict, record_path='measurements')
 print('Made dataframe for Humidity')
-df.to_sql('Humidity', alchemyengine, if_exists='append')
+df.to_sql('Humidity', alchemyengine, if_exists=if_exists)
 print('Written dataframe to Humidity')
 
 url = 'https://192.168.1.150/api/measurements/historical/5f1bb58a-7895-442b-a3a1-ed8112128526/Pa/2/'+start_epoch+'/'+end_epoch
@@ -42,7 +42,7 @@ response_dict = json.loads(response.text)
 print('Got response_dict')
 df = pd.json_normalize(response_dict, record_path='measurements')
 print('Made dataframe for Pressure')
-df.to_sql('Pressure', alchemyengine, if_exists='append')
+df.to_sql('Pressure', alchemyengine, if_exists=if_exists)
 print('Written dataframe to Pressure')
 
 
@@ -54,7 +54,7 @@ response_dict = json.loads(response.text)
 print('Got response_dict')
 df = pd.json_normalize(response_dict, record_path='measurements')
 print('Made dataframe for Dewpoint')
-df.to_sql('Dewpoint', alchemyengine, if_exists='append')
+df.to_sql('Dewpoint', alchemyengine, if_exists=if_exists)
 print('Written dataframe to Dewpoint')
 
 url = 'https://192.168.1.150/api/measurements/historical/5f1bb58a-7895-442b-a3a1-ed8112128526/m/4/'+start_epoch+'/'+end_epoch
@@ -65,7 +65,7 @@ response_dict = json.loads(response.text)
 print('Got response_dict')
 df = pd.json_normalize(response_dict, record_path='measurements')
 print('Made dataframe for Altitude')
-df.to_sql('Altitude', alchemyengine, if_exists='append')
+df.to_sql('Altitude', alchemyengine, if_exists=if_exists)
 print('Written dataframe to Altitude')
 
 url = 'https://192.168.1.150/api/measurements/historical/5f1bb58a-7895-442b-a3a1-ed8112128526/Pa/5/'+start_epoch+'/'+end_epoch
@@ -76,7 +76,7 @@ response_dict = json.loads(response.text)
 print('Got response_dict')
 df = pd.json_normalize(response_dict, record_path='measurements')
 print('Made dataframe for Vapor Pressure Deficit')
-df.to_sql('Vapor_Pressure_Deficit', alchemyengine, if_exists='append')
+df.to_sql('Vapor_Pressure_Deficit', alchemyengine, if_exists=if_exists)
 print('Written dataframe to Vapor Pressure Deficit')
 
 url = 'https://192.168.1.150/api/measurements/historical/4a6ba274-3fe1-4815-83cf-d1df94353136/lux/0/'+start_epoch+'/'+end_epoch
@@ -87,5 +87,5 @@ response_dict = json.loads(response.text)
 print('Got response_dict')
 df = pd.json_normalize(response_dict, record_path='measurements')
 print('Made dataframe for Light')
-df.to_sql('Light', alchemyengine, if_exists='append')
+df.to_sql('Light', alchemyengine, if_exists=if_exists)
 print('Written dataframe to Light')
