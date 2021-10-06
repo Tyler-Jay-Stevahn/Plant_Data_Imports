@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 import time
 
 ip_address = '127.0.0.1'
-ip_address_db = '192.168.1.14'
+ip_address_db = '192.168.1.4'
 api_key = 'efnpmWkIGsgNhMUsxR23G8tbOcYSZAJR1ZW8H1o1tjGPbi/8QODtiCW0FIdPI/kN5hoJnQWhvCiEs9ELymAt9HrL2TnL8N8VuAinq5Yc3J609yyNXuOC96OQf1njb1XN0hXiTB/x7JfeFZpe8b2ymlE+k8bgJOkqgLMUrZDebbk='
 endpoint = 'settings/inputs'
 start_epoch = '0'
