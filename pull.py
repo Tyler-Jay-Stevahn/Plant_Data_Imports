@@ -15,7 +15,7 @@ current_time = round(current_time)
 print(current_time)
 end_epoch = str(current_time)
 alchemyengine = create_engine('postgresql+psycopg2://postgres:Stevahn23!!@192.168.1.73:5432/Plant')
-if_exists = 'append'
+if_exists = 'replace'
 
 url = 'https://'+ip_address_db'/api/measurements/historical/5f1bb58a-7895-442b-a3a1-ed8112128526/F/0/'+start_epoch+'/'+end_epoch
 headers = {'Accept': 'application/vnd.mycodo.v1+json',
